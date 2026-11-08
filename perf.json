@@ -1,0 +1,47 @@
+{
+  "NFR01": {
+    "menuLoadMs": {
+      "n": 10,
+      "min": 40,
+      "median": 47,
+      "p95": 103,
+      "max": 103
+    },
+    "addItemMs": {
+      "n": 50,
+      "min": 57,
+      "median": 65,
+      "p95": 66,
+      "max": 82
+    },
+    "addItemWithin1s": 50,
+    "pass": true
+  },
+  "NFR08": {
+    "elements": 23,
+    "minHeightPx": 40,
+    "below40": 0,
+    "below40Samples": [],
+    "horizontalOverflow": false,
+    "pass": true
+  },
+  "NFR02": {
+    "workers": 20,
+    "orders": 200,
+    "paid": 200,
+    "errors": 0,
+    "errorSamples": [],
+    "notPaid": 0,
+    "ordersWithoutExactlyOneSuccess": 0,
+    "payMs": {
+      "n": 200,
+      "min": 16,
+      "median": 89,
+      "p95": 160,
+      "max": 272
+    },
+    "within3s": 200,
+    "wallMs": 2630,
+    "pass": true
+  }
+}

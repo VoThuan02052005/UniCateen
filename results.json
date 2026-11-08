@@ -1,0 +1,98 @@
+[
+  {
+    "id": "E2E-01",
+    "name": "Dang nhap sai bi tu choi",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-02",
+    "name": "Dang nhap nhan vien ban hang vao POS",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-03",
+    "name": "Tong tien don 2 com ga + 1 ca phe + 2 tra da = 96.000 d (BR11, BR12)",
+    "ok": true,
+    "detail": "96.000 đ"
+  },
+  {
+    "id": "E2E-04",
+    "name": "Thu 100.000 d, tien thua 4.000 d, don PAID (BR25, BR22)",
+    "ok": true,
+    "detail": "Tiền thừa trả khách: 4.000 đ"
+  },
+  {
+    "id": "E2E-05",
+    "name": "The bi tu choi: giao dich FAILED, don van cho thanh toan (BR21)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-06",
+    "name": "Chuyen khoan co noi dung la ma don viet lien (BR26)",
+    "ok": true,
+    "detail": "DH2611080002"
+  },
+  {
+    "id": "E2E-07",
+    "name": "Xac nhan chuyen khoan, hang doi trong (UC3.4)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-08",
+    "name": "Tra cuu don hien don vua thanh toan (UC2.4)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-09",
+    "name": "Don da thanh toan xuat hien o cot Chua lam (BR22)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-10",
+    "name": "Nhan lam: don chuyen sang Dang lam (BR39)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-11",
+    "name": "Canh bao ton thap va lo sap het han (BR38)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-12",
+    "name": "Goi y phieu xuat theo dinh muc va FEFO (BR34)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-13",
+    "name": "Xac nhan phieu xuat, tru ton (BR36)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-14",
+    "name": "Bao cao doanh thu co tien mat va chuyen khoan, khong tinh giao dich the that bai (BR29)",
+    "ok": true,
+    "detail": "Doanh thu136.000 đSố đơn thanh toán2Chuyển khoản40.000 đTiền mặt96.000 đ"
+  },
+  {
+    "id": "E2E-15",
+    "name": "Nhat ky ghi xac nhan chuyen khoan (NFR09)",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "id": "E2E-16",
+    "name": "Sinh vien thay don da quet the, hinh thuc Tien mat (UC2.5, BR16)",
+    "ok": true,
+    "detail": ""
+  }
+]

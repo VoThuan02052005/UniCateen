@@ -1,0 +1,52 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-08T22:49:44.536+07:00  INFO 3268 --- [unicateen] [           main] v.e.p.unicateen.UniCateenApplication     : Starting UniCateenApplication v1.0.0 using Java 17.0.21 with PID 3268 (/home/runner/work/UniCateen/UniCateen/backend/target/unicateen-1.0.0.jar started by runner in /home/runner/work/UniCateen/UniCateen)
+2026-11-08T22:49:44.539+07:00  INFO 3268 --- [unicateen] [           main] v.e.p.unicateen.UniCateenApplication     : The following 1 profile is active: "demo"
+2026-11-08T22:49:45.670+07:00  INFO 3268 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-08T22:49:45.777+07:00  INFO 3268 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 16 JPA repository interfaces.
+2026-11-08T22:49:46.677+07:00  INFO 3268 --- [unicateen] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-11-08T22:49:46.711+07:00  INFO 3268 --- [unicateen] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-08T22:49:46.711+07:00  INFO 3268 --- [unicateen] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-11-08T22:49:46.754+07:00  INFO 3268 --- [unicateen] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-08T22:49:46.755+07:00  INFO 3268 --- [unicateen] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2158 ms
+2026-11-08T22:49:47.098+07:00  INFO 3268 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-08T22:49:48.130+07:00  INFO 3268 --- [unicateen] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cd7d5e1
+2026-11-08T22:49:48.133+07:00  INFO 3268 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-08T22:49:48.209+07:00  INFO 3268 --- [unicateen] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/unicateen (MySQL 8.0)
+2026-11-08T22:49:48.290+07:00  INFO 3268 --- [unicateen] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `unicateen`.`flyway_schema_history` does not exist yet
+2026-11-08T22:49:48.295+07:00  INFO 3268 --- [unicateen] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.030s)
+2026-11-08T22:49:48.319+07:00  INFO 3268 --- [unicateen] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `unicateen`.`flyway_schema_history` ...
+2026-11-08T22:49:48.431+07:00  INFO 3268 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `unicateen`: << Empty Schema >>
+2026-11-08T22:49:48.473+07:00  INFO 3268 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `unicateen` to version "1 - schema"
+2026-11-08T22:49:48.856+07:00  INFO 3268 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `unicateen` to version "2 - constraints"
+2026-11-08T22:49:49.482+07:00  INFO 3268 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `unicateen` to version "3 - seed demo"
+2026-11-08T22:49:49.539+07:00  INFO 3268 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `unicateen`, now at version v3 (execution time 00:00.927s)
+2026-11-08T22:49:49.653+07:00  INFO 3268 --- [unicateen] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-08T22:49:49.704+07:00  INFO 3268 --- [unicateen] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-08T22:49:49.734+07:00  INFO 3268 --- [unicateen] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-08T22:49:49.977+07:00  INFO 3268 --- [unicateen] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-08T22:49:51.382+07:00  INFO 3268 --- [unicateen] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-08T22:49:51.385+07:00  INFO 3268 --- [unicateen] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-08T22:49:51.884+07:00  INFO 3268 --- [unicateen] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-08T22:49:53.060+07:00  WARN 3268 --- [unicateen] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a2fb4e9a-1644-4dbe-b43d-5309e943d2af
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-08T22:49:53.088+07:00  INFO 3268 --- [unicateen] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-08T22:49:53.156+07:00  INFO 3268 --- [unicateen] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-11-08T22:49:53.733+07:00  INFO 3268 --- [unicateen] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-08T22:49:53.835+07:00  INFO 3268 --- [unicateen] [           main] v.e.p.unicateen.UniCateenApplication     : Started UniCateenApplication in 9.885 seconds (process running for 10.647)
+2026-11-08T22:49:53.946+07:00  INFO 3268 --- [unicateen] [           main] v.e.p.u.i.c.DemoPasswordInitializer      : Da dat mat khau demo cho 10 tai khoan mau
+2026-11-08T22:49:55.304+07:00  INFO 3268 --- [unicateen] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-08T22:49:55.304+07:00  INFO 3268 --- [unicateen] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-08T22:49:55.306+07:00  INFO 3268 --- [unicateen] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms

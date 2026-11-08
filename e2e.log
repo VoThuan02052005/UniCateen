@@ -1,0 +1,18 @@
+DAT  E2E-01 Dang nhap sai bi tu choi 
+DAT  E2E-02 Dang nhap nhan vien ban hang vao POS 
+DAT  E2E-03 Tong tien don 2 com ga + 1 ca phe + 2 tra da = 96.000 d (BR11, BR12) 96.000 đ
+DAT  E2E-04 Thu 100.000 d, tien thua 4.000 d, don PAID (BR25, BR22) Tiền thừa trả khách: 4.000 đ
+DAT  E2E-05 The bi tu choi: giao dich FAILED, don van cho thanh toan (BR21) 
+DAT  E2E-06 Chuyen khoan co noi dung la ma don viet lien (BR26) DH2611080002
+DAT  E2E-07 Xac nhan chuyen khoan, hang doi trong (UC3.4) 
+DAT  E2E-08 Tra cuu don hien don vua thanh toan (UC2.4) 
+DAT  E2E-09 Don da thanh toan xuat hien o cot Chua lam (BR22) 
+DAT  E2E-10 Nhan lam: don chuyen sang Dang lam (BR39) 
+DAT  E2E-11 Canh bao ton thap va lo sap het han (BR38) 
+DAT  E2E-12 Goi y phieu xuat theo dinh muc va FEFO (BR34) 
+DAT  E2E-13 Xac nhan phieu xuat, tru ton (BR36) 
+DAT  E2E-14 Bao cao doanh thu co tien mat va chuyen khoan, khong tinh giao dich the that bai (BR29) Doanh thu136.000 đSố đơn thanh toán2Chuyển khoản40.000 đTiền mặt96.000 đ
+DAT  E2E-15 Nhat ky ghi xac nhan chuyen khoan (NFR09) 
+DAT  E2E-16 Sinh vien thay don da quet the, hinh thuc Tien mat (UC2.5, BR16) 
+
+TONG: 16/16 buoc dat

@@ -1,0 +1,7 @@
+# Cau hinh cho test tich hop: CSDL MySQL do Testcontainers cung cap (@ServiceConnection)
+unicateen:
+  card:
+    timeout-seconds: 1      # the "...SLOW" qua han nhanh trong test
+spring:
+  flyway:
+    locations: classpath:db/migration,classpath:db/demo

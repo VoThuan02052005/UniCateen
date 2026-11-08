@@ -1,0 +1,18 @@
+# MySQL 8 cho moi truong phat trien: docker compose up -d
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: unicateen-mysql
+    environment:
+      MYSQL_DATABASE: unicateen
+      MYSQL_USER: unicateen
+      MYSQL_PASSWORD: unicateen
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Asia/Ho_Chi_Minh
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    ports:
+      - "3306:3306"
+    volumes:
+      - unicateen-data:/var/lib/mysql
+volumes:
+  unicateen-data:

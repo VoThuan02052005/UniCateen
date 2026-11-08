@@ -1,0 +1,22 @@
+{
+  "name": "UniCateen",
+  "image": "mcr.microsoft.com/devcontainers/java:1-17-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": { "version": "none", "installMaven": "true", "mavenVersion": "3.9.9" },
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "hostRequirements": { "cpus": 4, "memory": "8gb" },
+  "forwardPorts": [5173, 8080],
+  "portsAttributes": {
+    "5173": { "label": "UniCateen - giao dien", "onAutoForward": "openBrowser" },
+    "8080": { "label": "UniCateen - API", "onAutoForward": "silent" },
+    "3306": { "label": "MySQL", "onAutoForward": "ignore" }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["vscjava.vscode-java-pack", "vmware.vscode-spring-boot", "dbaeumer.vscode-eslint"]
+    }
+  }
+}

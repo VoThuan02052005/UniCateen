@@ -1,0 +1,7 @@
+{
+  "name": "unicateen-e2e",
+  "private": true,
+  "type": "module",
+  "description": "Kiem thu chap nhan tren giao dien that va chup man hinh cho bao cao",
+  "dependencies": { "playwright": "1.48.2" }
+}

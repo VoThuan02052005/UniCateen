@@ -13,3 +13,6 @@ frontend/dist/
 build_log.txt
 backend.log
 test_log.txt
+e2e/node_modules/
+e2e/out/
+e2e/e2e.log

@@ -76,3 +76,66 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npm run build
+
+  e2e:
+    name: E2E - he thong chay that, chup man hinh
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: unicateen
+          MYSQL_USER: unicateen
+          MYSQL_PASSWORD: unicateen
+          MYSQL_ROOT_PASSWORD: root
+          TZ: Asia/Ho_Chi_Minh
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="mysqladmin ping -uroot -proot" --health-interval=5s --health-timeout=5s --health-retries=30
+    env:
+      TZ: Asia/Ho_Chi_Minh
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build giao dien va dong goi JAR
+        run: |
+          (cd frontend && npm install --no-audit --no-fund && npm run build)
+          (cd backend && mvn -B -q -Pwith-frontend -DskipTests package)
+      - name: Khoi dong he thong (profile demo)
+        env:
+          DB_URL: jdbc:mysql://127.0.0.1:3306/unicateen?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Ho_Chi_Minh
+        run: |
+          nohup java -jar backend/target/unicateen-1.0.0.jar --spring.profiles.active=demo > app.log 2>&1 &
+          for i in $(seq 1 60); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/api/auth/me || true)
+            [ "$code" = "401" ] && echo "He thong da chay" && break
+            sleep 3
+          done
+      - name: Chay kich ban giao dien va chup man hinh
+        id: e2e
+        working-directory: e2e
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          set -o pipefail
+          node screens.mjs 2>&1 | tee e2e.log
+      - name: Ghi ket qua vao nhanh ci-e2e
+        if: always()
+        run: |
+          mkdir -p /tmp/e2e
+          cp -r e2e/out/. /tmp/e2e/ 2>/dev/null || true
+          cp e2e/e2e.log app.log /tmp/e2e/ 2>/dev/null || true
+          echo "run=${{ github.run_id }} sha=${{ github.sha }} e2e=${{ steps.e2e.outcome }}" > /tmp/e2e/STATUS.txt
+          cd /tmp/e2e
+          git init -q -b ci-e2e
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -q -m "E2E ${{ github.run_id }} ${{ steps.e2e.outcome }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-e2e

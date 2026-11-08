@@ -30,7 +30,7 @@ async function session(email) {
 
 async function go(page, path) {
   await page.goto(`${BASE}/#/${path}`);
-  await page.waitForSelector('h1', { timeout: 15000 });
+  await page.waitForSelector('main.content > *', { timeout: 15000 });
   await page.waitForTimeout(800);
 }
 
@@ -190,7 +190,7 @@ await step('E2E-15', 'Quan tri vien', async () => {
   await shot(page, '20_tai_khoan');
   await go(page, 'audit');
   await shot(page, '21_nhat_ky');
-  check('E2E-15', 'Nhat ky ghi xac nhan chuyen khoan (NFR09)', (await page.textContent('table')).includes('TRANSFER_CONFIRM'));
+  check('E2E-15', 'Nhat ky ghi xac nhan chuyen khoan (NFR09)', (await page.textContent('.page')).includes('TRANSFER_CONFIRM'));
   await ctx.close();
 });
 

@@ -119,7 +119,7 @@ function IssueDetail({ issueId, onClose, onChanged }) {
             <tbody>
               {lines.map((l, i) => (
                 <tr key={`${l.lotId}-${i}`}>
-                  <td>{l.lotCode}</td><td>{l.ingredientName}</td><td>{date(l.expiryDate)}</td>
+                  <td>{l.lotCode}</td><td>{l.ingredientName}</td><td>{date(l.expiryDate) || 'Không'}</td>
                   <td className="num">{qty(l.available)} {l.unit}</td><td className="num">{qty(l.suggestedQty)}</td>
                   <td><input type="number" min="0" step="0.001" max={l.available} value={l.issuedQty}
                              onChange={(e) => setLines(lines.map((x, j) => (j === i ? { ...x, issuedQty: e.target.value } : x)))} /></td>

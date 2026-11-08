@@ -7,6 +7,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   backend:
     name: Backend - mvn verify
@@ -19,8 +22,11 @@ jobs:
           java-version: '17'
           cache: maven
       - name: Build va chay test
+        id: mvn
         working-directory: backend
-        run: mvn -B verify
+        run: |
+          set -o pipefail
+          mvn -B verify 2>&1 | tee mvn.log
       - name: Tom tat ket qua test
         if: always()
         run: |
@@ -37,6 +43,19 @@ jobs:
           print("\n".join(rows))
           print(f"\n**Tong: {tot[0]} test, {tot[0] - tot[1] - tot[2] - tot[3]} dat, {tot[1] + tot[2]} loi, {tot[3]} bo qua**")
           PY
+      - name: Ghi log va bao cao test vao nhanh ci-results
+        if: always()
+        run: |
+          mkdir -p /tmp/out/surefire
+          cp backend/mvn.log /tmp/out/ 2>/dev/null || true
+          cp backend/target/surefire-reports/*.txt backend/target/surefire-reports/*.xml /tmp/out/surefire/ 2>/dev/null || true
+          echo "run=${{ github.run_id }} sha=${{ github.sha }} mvn=${{ steps.mvn.outcome }}" > /tmp/out/STATUS.txt
+          cd /tmp/out
+          git init -q -b ci-results
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -q -m "CI ${{ github.run_id }} ${{ steps.mvn.outcome }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-results
       - name: Luu bao cao test
         if: always()
         uses: actions/upload-artifact@v4

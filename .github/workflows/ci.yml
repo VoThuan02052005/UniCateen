@@ -126,13 +126,20 @@ jobs:
           npx playwright install --with-deps chromium
           set -o pipefail
           node screens.mjs 2>&1 | tee e2e.log
+      - name: Do NFR01, NFR02, NFR08
+        id: perf
+        if: always()
+        working-directory: e2e
+        run: |
+          set -o pipefail
+          node perf.mjs 2>&1 | tee perf.log
       - name: Ghi ket qua vao nhanh ci-e2e
         if: always()
         run: |
           mkdir -p /tmp/e2e
           cp -r e2e/out/. /tmp/e2e/ 2>/dev/null || true
-          cp e2e/e2e.log app.log /tmp/e2e/ 2>/dev/null || true
-          echo "run=${{ github.run_id }} sha=${{ github.sha }} e2e=${{ steps.e2e.outcome }}" > /tmp/e2e/STATUS.txt
+          cp e2e/e2e.log e2e/perf.log app.log /tmp/e2e/ 2>/dev/null || true
+          echo "run=${{ github.run_id }} sha=${{ github.sha }} e2e=${{ steps.e2e.outcome }} perf=${{ steps.perf.outcome }}" > /tmp/e2e/STATUS.txt
           cd /tmp/e2e
           git init -q -b ci-e2e
           git config user.name "github-actions"

@@ -24,7 +24,7 @@ button, .button {
 button:disabled { opacity: .5; cursor: not-allowed; }
 button.ghost, .button.ghost { background: transparent; color: var(--brand); }
 button.big { width: 100%; min-height: 52px; font-size: 17px; font-weight: 600; margin-top: 8px; }
-button.sq { min-height: 36px; width: 36px; padding: 0; justify-content: center; }
+button.sq { min-height: 40px; width: 40px; padding: 0; justify-content: center; }
 input, select, textarea { min-height: 40px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: #fff; }
 textarea { min-height: 70px; width: 100%; }
 input[type="checkbox"] { min-height: auto; width: 20px; height: 20px; }

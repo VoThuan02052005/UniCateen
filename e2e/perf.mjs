@@ -62,9 +62,10 @@ const summary = (arr) => ({
   }
 
   // NFR08: kich thuoc nut, o mon tren POS
-  const sizes = await page.$$eval('.pos button, .tile', (els) => els
+  const els = await page.$$eval('.pos button, .tile', (els) => els
     .filter((e) => e.offsetParent !== null)
-    .map((e) => Math.round(e.getBoundingClientRect().height)));
+    .map((e) => ({ h: Math.round(e.getBoundingClientRect().height), cls: e.className, text: e.textContent.trim().slice(0, 20) })));
+  const sizes = els.map((e) => e.h);
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
   await page.screenshot({ path: 'out/perf_pos.png' });
   await browser.close();
@@ -79,6 +80,7 @@ const summary = (arr) => ({
     elements: sizes.length,
     minHeightPx: Math.min(...sizes),
     below40: sizes.filter((h) => h < 40).length,
+    below40Samples: els.filter((e) => e.h < 40).slice(0, 5),
     horizontalOverflow: overflow,
     pass: sizes.every((h) => h >= 40) && !overflow,
   };
@@ -134,7 +136,7 @@ async function login(email) {
           { orderCode: o.code, receivedAmount: o.totalAmount },
           { 'Idempotency-Key': `perf-${w}-${n}-${Date.now()}` });
         payMs.push(Date.now() - s);
-        paid.push({ order: o.code, status: p.status });
+        paid.push({ order: o.code, status: p.status, w });
       } catch (e) {
         errors.push(String(e.message));
       }
@@ -143,10 +145,11 @@ async function login(email) {
   const wallMs = Date.now() - t0;
 
   // doi chieu: moi don vua tao co dung mot giao dich SUCCESS
-  const check = clients[0];
+  // moi nhan vien ban hang chi xem duoc don cua minh (NFR04), nen doi chieu bang dung phien da tao don
   let notPaid = 0;
   let multiSuccess = 0;
-  for (const { order } of paid) {
+  for (const { order, w } of paid) {
+    const check = clients[w];
     const o = await check(`/api/orders/${order}`);
     if (o.status !== 'PAID') notPaid++;
     const ps = await check(`/api/payments/by-order/${order}`);

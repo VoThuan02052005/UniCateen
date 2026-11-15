@@ -1,0 +1,4 @@
+NFR01 {"menuLoadMs":{"n":10,"min":38,"median":41,"p95":50,"max":50},"addItemMs":{"n":50,"min":53,"median":65,"p95":66,"max":66},"addItemWithin1s":50,"pass":true}
+NFR08 {"elements":23,"minHeightPx":40,"below40":0,"below40Samples":[],"horizontalOverflow":false,"pass":true}
+NFR02 {"workers":20,"orders":200,"paid":200,"errors":0,"errorSamples":[],"notPaid":0,"ordersWithoutExactlyOneSuccess":0,"payMs":{"n":200,"min":28,"median":86,"p95":138,"max":210},"within3s":200,"wallMs":2571,"pass":true}
+DAT tat ca chi tieu do

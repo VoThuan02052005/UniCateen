@@ -1,0 +1,263 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< vn.edu.phenikaa:unicateen >----------------------
+[INFO] Building UniCateen 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ unicateen ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ unicateen ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 120 source files with javac [debug parameters release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ unicateen ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ unicateen ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 12 source files with javac [debug parameters release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ unicateen ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running vn.edu.phenikaa.unicateen.application.CodeGeneratorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.070 s -- in vn.edu.phenikaa.unicateen.application.CodeGeneratorTest
+[INFO] Running vn.edu.phenikaa.unicateen.integration.InventoryIntegrationTest
+15:44:49.303 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [vn.edu.phenikaa.unicateen.integration.InventoryIntegrationTest]: InventoryIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:44:49.361 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+15:44:49.363 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+15:44:49.380 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.21.4
+15:44:49.783 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+15:44:49.788 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+15:44:49.798 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.4.2
+  API Version: 1.54
+  Operating System: Ubuntu 26.04.1 LTS
+  Total Memory: 15982 MB
+15:44:49.882 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling docker image: testcontainers/ryuk:0.12.0. Please be patient; this may take some time but only needs to be done once.
+15:44:50.640 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Starting to pull image
+15:44:50.655 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+15:44:51.212 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (0 bytes/? MB)
+15:44:51.213 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (0 bytes/? MB)
+15:44:51.310 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (2 MB/6 MB)
+15:44:51.312 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (2 MB/6 MB)
+15:44:51.345 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (2 MB/6 MB)
+15:44:51.348 [docker-java-stream--1900126211] INFO tc.testcontainers/ryuk:0.12.0 -- Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (2 MB/6 MB)
+15:44:51.349 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Image testcontainers/ryuk:0.12.0 pull took PT1.466869419S
+15:44:51.394 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Creating container for image: testcontainers/ryuk:0.12.0
+15:44:51.761 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 is starting: b092dd12215fb4bbe2188f370e33483f0ff23596776b91b699aa1712ea7f2067
+15:44:52.037 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 started in PT0.643651755S
+15:44:52.050 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+15:44:52.050 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+15:44:52.050 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+15:44:52.054 [main] INFO tc.mysql:8.0 -- Pulling docker image: mysql:8.0. Please be patient; this may take some time but only needs to be done once.
+15:44:52.471 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Starting to pull image
+15:44:52.472 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+15:44:52.769 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers: 10 pending,  1 downloaded,  0 extracted, (0 bytes/? MB)
+15:44:52.770 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  9 pending,  2 downloaded,  0 extracted, (0 bytes/? MB)
+15:44:52.771 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  8 pending,  3 downloaded,  0 extracted, (0 bytes/? MB)
+15:44:52.873 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  7 pending,  4 downloaded,  0 extracted, (10 MB/? MB)
+15:44:52.878 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  6 pending,  5 downloaded,  0 extracted, (10 MB/? MB)
+15:44:52.878 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  5 pending,  6 downloaded,  0 extracted, (11 MB/? MB)
+15:44:52.886 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  4 pending,  7 downloaded,  0 extracted, (11 MB/? MB)
+15:44:53.072 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  4 pending,  8 downloaded,  0 extracted, (108 MB/? MB)
+15:44:53.075 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  4 pending,  9 downloaded,  0 extracted, (108 MB/? MB)
+15:44:53.670 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  3 pending, 10 downloaded,  0 extracted, (219 MB/? MB)
+15:44:53.969 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  2 pending, 11 downloaded,  0 extracted, (236 MB/? MB)
+15:44:54.169 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  1 pending, 12 downloaded,  0 extracted, (236 MB/? MB)
+15:44:54.371 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  0 extracted, (236 MB/236 MB)
+15:44:55.072 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  1 extracted, (236 MB/236 MB)
+15:44:55.074 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  2 extracted, (236 MB/236 MB)
+15:44:55.080 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  3 extracted, (236 MB/236 MB)
+15:44:55.174 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  4 extracted, (236 MB/236 MB)
+15:44:55.274 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  5 extracted, (236 MB/236 MB)
+15:44:55.275 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  6 extracted, (236 MB/236 MB)
+15:44:55.773 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  7 extracted, (236 MB/236 MB)
+15:44:55.774 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  8 extracted, (236 MB/236 MB)
+15:44:58.571 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded,  9 extracted, (236 MB/236 MB)
+15:44:58.572 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded, 10 extracted, (236 MB/236 MB)
+15:44:58.590 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pulling image layers:  0 pending, 13 downloaded, 11 extracted, (236 MB/236 MB)
+15:44:58.591 [docker-java-stream--902944494] INFO tc.mysql:8.0 -- Pull complete. 13 layers, pulled in 6s (downloaded 236 MB at 39 MB/s)
+15:44:58.591 [main] INFO tc.mysql:8.0 -- Image mysql:8.0 pull took PT6.536446821S
+15:44:58.619 [main] INFO tc.mysql:8.0 -- Creating container for image: mysql:8.0
+15:45:03.985 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 is starting: f21a6be59b19ad386feb616900cb7429f22c1c2ea07994606b2807d3998ab5e5
+15:45:04.132 [main] INFO tc.mysql:8.0 -- Waiting for database connection to become available at jdbc:mysql://localhost:32769/test using query 'SELECT 1'
+15:45:11.632 [main] INFO tc.mysql:8.0 -- Container mysql:8.0 started in PT13.013276529S
+15:45:11.633 [main] INFO tc.mysql:8.0 -- Container is started (JDBC URL: jdbc:mysql://localhost:32769/test)
+15:45:11.709 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration vn.edu.phenikaa.unicateen.UniCateenApplication for test class vn.edu.phenikaa.unicateen.integration.InventoryIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-15T15:45:12.121Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.InventoryIntegrationTest       : Starting InventoryIntegrationTest using Java 17.0.21 with PID 2275 (started by runner in /home/runner/work/UniCateen/UniCateen/backend)
+2026-11-15T15:45:12.122Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.InventoryIntegrationTest       : The following 2 profiles are active: "demo", "test"
+2026-11-15T15:45:12.765Z  INFO 2275 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-15T15:45:12.839Z  INFO 2275 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 16 JPA repository interfaces.
+2026-11-15T15:45:13.854Z  INFO 2275 --- [unicateen] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:32769/test (MySQL 8.0)
+2026-11-15T15:45:13.888Z  INFO 2275 --- [unicateen] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `test`.`flyway_schema_history` does not exist yet
+2026-11-15T15:45:13.891Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.014s)
+2026-11-15T15:45:13.909Z  INFO 2275 --- [unicateen] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `test`.`flyway_schema_history` ...
+2026-11-15T15:45:13.961Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: << Empty Schema >>
+2026-11-15T15:45:13.984Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "1 - schema"
+2026-11-15T15:45:14.231Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "2 - constraints"
+2026-11-15T15:45:14.940Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `test` to version "3 - seed demo"
+2026-11-15T15:45:14.981Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 3 migrations to schema `test`, now at version v3 (execution time 00:00.923s)
+2026-11-15T15:45:15.055Z  INFO 2275 --- [unicateen] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-15T15:45:15.089Z  INFO 2275 --- [unicateen] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-11-15T15:45:15.113Z  INFO 2275 --- [unicateen] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-15T15:45:15.335Z  INFO 2275 --- [unicateen] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-15T15:45:15.362Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-15T15:45:15.405Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3976910
+2026-11-15T15:45:15.407Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-15T15:45:16.530Z  INFO 2275 --- [unicateen] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15T15:45:16.532Z  INFO 2275 --- [unicateen] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-15T15:45:16.963Z  INFO 2275 --- [unicateen] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-15T15:45:17.831Z  WARN 2275 --- [unicateen] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1c401386-9d85-4dad-b47a-0f48182a89d2
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-15T15:45:17.847Z  INFO 2275 --- [unicateen] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-15T15:45:18.398Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.InventoryIntegrationTest       : Started InventoryIntegrationTest in 6.606 seconds (process running for 30.068)
+2026-11-15T15:45:18.515Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.c.DemoPasswordInitializer      : Da dat mat khau demo cho 10 tai khoan mau
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.23 s -- in vn.edu.phenikaa.unicateen.integration.InventoryIntegrationTest
+[INFO] Running vn.edu.phenikaa.unicateen.integration.SecurityIntegrationTest
+2026-11-15T15:45:19.371Z  INFO 2275 --- [unicateen] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [vn.edu.phenikaa.unicateen.integration.SecurityIntegrationTest]: SecurityIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T15:45:19.383Z  INFO 2275 --- [unicateen] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration vn.edu.phenikaa.unicateen.UniCateenApplication for test class vn.edu.phenikaa.unicateen.integration.SecurityIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-15T15:45:19.408Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.SecurityIntegrationTest        : Starting SecurityIntegrationTest using Java 17.0.21 with PID 2275 (started by runner in /home/runner/work/UniCateen/UniCateen/backend)
+2026-11-15T15:45:19.408Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.SecurityIntegrationTest        : The following 2 profiles are active: "demo", "test"
+2026-11-15T15:45:19.575Z  INFO 2275 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-15T15:45:19.592Z  INFO 2275 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 16 JPA repository interfaces.
+2026-11-15T15:45:19.738Z  INFO 2275 --- [unicateen] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:32769/test (MySQL 8.0)
+2026-11-15T15:45:19.752Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.006s)
+2026-11-15T15:45:19.757Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: 3
+2026-11-15T15:45:19.758Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Schema `test` is up to date. No migration necessary.
+2026-11-15T15:45:19.779Z  INFO 2275 --- [unicateen] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-15T15:45:19.783Z  INFO 2275 --- [unicateen] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-15T15:45:19.791Z  INFO 2275 --- [unicateen] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-15T15:45:19.792Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-15T15:45:19.803Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74c4ea35
+2026-11-15T15:45:19.803Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-15T15:45:20.041Z  INFO 2275 --- [unicateen] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15T15:45:20.041Z  INFO 2275 --- [unicateen] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-15T15:45:20.386Z  WARN 2275 --- [unicateen] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a1a1e340-9dab-4ba6-b5e5-12bcb503a87d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-15T15:45:20.387Z  INFO 2275 --- [unicateen] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-15T15:45:20.588Z  INFO 2275 --- [unicateen] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-15T15:45:20.589Z  INFO 2275 --- [unicateen] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-15T15:45:20.590Z  INFO 2275 --- [unicateen] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-15T15:45:20.603Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.SecurityIntegrationTest        : Started SecurityIntegrationTest in 1.217 seconds (process running for 32.273)
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.205 s -- in vn.edu.phenikaa.unicateen.integration.SecurityIntegrationTest
+[INFO] Running vn.edu.phenikaa.unicateen.integration.SessionTimeoutIntegrationTest
+2026-11-15T15:45:21.580Z  INFO 2275 --- [unicateen] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [vn.edu.phenikaa.unicateen.integration.SessionTimeoutIntegrationTest]: SessionTimeoutIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T15:45:21.586Z  INFO 2275 --- [unicateen] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration vn.edu.phenikaa.unicateen.UniCateenApplication for test class vn.edu.phenikaa.unicateen.integration.SessionTimeoutIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-15T15:45:21.813Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.SessionTimeoutIntegrationTest  : Starting SessionTimeoutIntegrationTest using Java 17.0.21 with PID 2275 (started by runner in /home/runner/work/UniCateen/UniCateen/backend)
+2026-11-15T15:45:21.813Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.SessionTimeoutIntegrationTest  : The following 2 profiles are active: "demo", "test"
+2026-11-15T15:45:21.907Z  INFO 2275 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-15T15:45:21.920Z  INFO 2275 --- [unicateen] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 16 JPA repository interfaces.
+2026-11-15T15:45:22.117Z  INFO 2275 --- [unicateen] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-15T15:45:22.157Z  INFO 2275 --- [unicateen] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-15T15:45:22.158Z  INFO 2275 --- [unicateen] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-11-15T15:45:22.193Z  INFO 2275 --- [unicateen] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-15T15:45:22.194Z  INFO 2275 --- [unicateen] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 380 ms
+2026-11-15T15:45:22.289Z  INFO 2275 --- [unicateen] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:32769/test (MySQL 8.0)
+2026-11-15T15:45:22.299Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.005s)
+2026-11-15T15:45:22.306Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `test`: 3
+2026-11-15T15:45:22.307Z  INFO 2275 --- [unicateen] [           main] o.f.core.internal.command.DbMigrate      : Schema `test` is up to date. No migration necessary.
+2026-11-15T15:45:22.341Z  INFO 2275 --- [unicateen] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-15T15:45:22.343Z  INFO 2275 --- [unicateen] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-15T15:45:22.349Z  INFO 2275 --- [unicateen] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-15T15:45:22.349Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-15T15:45:22.362Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52c0568c
+2026-11-15T15:45:22.362Z  INFO 2275 --- [unicateen] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-15T15:45:22.571Z  INFO 2275 --- [unicateen] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15T15:45:22.571Z  INFO 2275 --- [unicateen] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-15T15:45:22.829Z  WARN 2275 --- [unicateen] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f632c0c6-843b-446f-bc9c-df1b2d549259
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-11-15T15:45:22.829Z  INFO 2275 --- [unicateen] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-15T15:45:22.953Z  INFO 2275 --- [unicateen] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 40001 (http) with context path '/'
+2026-11-15T15:45:22.956Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.i.SessionTimeoutIntegrationTest  : Started SessionTimeoutIntegrationTest in 1.169 seconds (process running for 34.626)
+2026-11-15T15:45:23.107Z  INFO 2275 --- [unicateen] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-15T15:45:23.108Z  INFO 2275 --- [unicateen] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-15T15:45:23.108Z  INFO 2275 --- [unicateen] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 66.68 s -- in vn.edu.phenikaa.unicateen.integration.SessionTimeoutIntegrationTest
+[INFO] Running vn.edu.phenikaa.unicateen.integration.PaymentIntegrationTest
+2026-11-15T15:46:28.255Z  INFO 2275 --- [unicateen] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [vn.edu.phenikaa.unicateen.integration.PaymentIntegrationTest]: PaymentIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T15:46:28.259Z  INFO 2275 --- [unicateen] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration vn.edu.phenikaa.unicateen.UniCateenApplication for test class vn.edu.phenikaa.unicateen.integration.PaymentIntegrationTest
+2026-11-15T15:46:28.526Z  WARN 2275 --- [unicateen] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1062, SQLState: 23000
+2026-11-15T15:46:28.526Z ERROR 2275 --- [unicateen] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Duplicate entry '7' for key 'preparations.uq_prep_order'
+2026-11-15T15:46:29.571Z  WARN 2275 --- [unicateen] [           main] v.e.p.u.a.payment.PaymentService         : Dich vu the loi cho giao dich GD-261115-0007: Dịch vụ thẻ không phản hồi trong 1 giây
+2026-11-15T15:46:29.789Z  INFO 2275 --- [unicateen] [           main] v.e.p.u.a.payment.PaymentService         : Giao dich the GD-T-CARD het thoi gian cho, chuyen FAILED
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.640 s -- in vn.edu.phenikaa.unicateen.integration.PaymentIntegrationTest
+[INFO] Running vn.edu.phenikaa.unicateen.integration.TestCaseIntegrationTest
+2026-11-15T15:46:29.897Z  INFO 2275 --- [unicateen] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [vn.edu.phenikaa.unicateen.integration.TestCaseIntegrationTest]: TestCaseIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-15T15:46:29.901Z  INFO 2275 --- [unicateen] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration vn.edu.phenikaa.unicateen.UniCateenApplication for test class vn.edu.phenikaa.unicateen.integration.TestCaseIntegrationTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.052 s -- in vn.edu.phenikaa.unicateen.integration.TestCaseIntegrationTest
+[INFO] Running vn.edu.phenikaa.unicateen.domain.UserRulesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in vn.edu.phenikaa.unicateen.domain.UserRulesTest
+[INFO] Running vn.edu.phenikaa.unicateen.domain.PaymentStateTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in vn.edu.phenikaa.unicateen.domain.PaymentStateTest
+[INFO] Running vn.edu.phenikaa.unicateen.domain.StockRulesTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.010 s -- in vn.edu.phenikaa.unicateen.domain.StockRulesTest
+[INFO] Running vn.edu.phenikaa.unicateen.domain.OrderStateTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in vn.edu.phenikaa.unicateen.domain.OrderStateTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 86, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ unicateen ---
+[INFO] Building jar: /home/runner/work/UniCateen/UniCateen/backend/target/unicateen-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.5:repackage (repackage) @ unicateen ---
+[INFO] Replacing main artifact /home/runner/work/UniCateen/UniCateen/backend/target/unicateen-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /home/runner/work/UniCateen/UniCateen/backend/target/unicateen-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:48 min
+[INFO] Finished at: 2026-11-15T15:46:31Z
+[INFO] ------------------------------------------------------------------------

@@ -17,16 +17,17 @@ async function caption(page, text) {
     if (!el) {
       el = document.createElement('div');
       el.id = 'demo-caption';
-      el.style.cssText = 'position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:99999;'
+      el.style.cssText = 'position:fixed;left:122px;bottom:16px;z-index:99999;'
         + 'background:rgba(34,55,113,.94);color:#fff;font:600 19px/1.35 system-ui,sans-serif;'
-        + 'padding:10px 22px;border-radius:10px;max-width:86%;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.25);pointer-events:none';
+        + 'padding:10px 22px;border-radius:10px;max-width:560px;text-align:left;box-shadow:0 4px 14px rgba(0,0,0,.25);pointer-events:none';
       document.body.appendChild(el);
     }
     el.textContent = t;
   }, text);
 }
 
-const pause = (page, ms = 1500) => page.waitForTimeout(ms);
+const SLOW = 1.6;
+const pause = (page, ms = 1500) => page.waitForTimeout(Math.round(ms * SLOW));
 
 async function open(name, email, intro) {
   const ctx = await browser.newContext({ viewport: SIZE, locale: 'vi-VN', recordVideo: { dir: 'video/raw', size: SIZE } });
